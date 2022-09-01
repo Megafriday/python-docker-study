@@ -25,6 +25,6 @@ RUN wget --quiet http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.
     pip install TA-Lib && \
     rm -R ta-lib ta-lib-0.4.0-src.tar.gz
 
-RUN mkdir /workspace
+WORKDIR /python-study
 
 CMD ["jupyter-lab", "--ip=0.0.0.0","--port=8888" ,"--no-browser", "--allow-root", "--LabApp.token=''"]
